@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>promo tiles</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI Variable Display','Segoe UI',system-ui,sans-serif;color:#fff;overflow:hidden;position:relative;
+    background:linear-gradient(135deg,#0a6cff 0%,#35b8ff 100%)}
+  body[data-t="small"]{width:440px;height:280px}
+  body[data-t="marquee"]{width:1400px;height:560px}
+  .t{display:none}
+  body[data-t="small"] #small,body[data-t="marquee"] #marquee{display:block}
+  .icon{border-radius:22%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 34px rgba(0,40,120,.35)}
+  .icon svg{width:62%;height:62%}
+  .glow{position:absolute;border-radius:50%;background:rgba(255,255,255,.14)}
+  /* small */
+  #small .glow.a{width:320px;height:320px;right:-110px;top:-120px}
+  #small .glow.b{width:200px;height:200px;right:60px;bottom:-110px}
+  #small .icon{position:absolute;left:34px;top:38px;width:88px;height:88px}
+  #small h1{position:absolute;left:34px;top:146px;font-size:44px;line-height:1;letter-spacing:-1.2px;font-weight:700}
+  #small p{position:absolute;left:36px;top:204px;font-size:19px;opacity:.92;font-weight:500}
+  /* marquee */
+  #marquee .glow.a{width:760px;height:760px;right:-200px;top:-260px}
+  #marquee .glow.b{width:420px;height:420px;left:520px;bottom:-260px}
+  #marquee .icon{position:absolute;left:110px;top:120px;width:120px;height:120px}
+  #marquee h1{position:absolute;left:110px;top:270px;font-size:84px;line-height:1;letter-spacing:-2.5px;font-weight:700}
+  #marquee p{position:absolute;left:114px;top:372px;font-size:30px;font-weight:500;opacity:.95;width:600px;line-height:1.35}
+  .dev{position:absolute;background:#fff;border-radius:30px;overflow:hidden;box-shadow:0 30px 80px rgba(0,30,100,.4)}
+  .dev iframe{border:0;display:block;transform-origin:0 0}
+</style></head>
+<body>
+<script>document.body.dataset.t = new URLSearchParams(location.search).get('t') || 'small';</script>
+
+<svg width="0" height="0" style="position:absolute"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#64d2ff"/><stop offset="1" stop-color="#007aff"/></linearGradient></defs></svg>
+
+<div class="t" id="small">
+  <div class="glow a"></div><div class="glow b"></div>
+  <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2.5c-3.4 4.4-6 7.5-6 11a6 6 0 0 0 12 0c0-3.5-2.6-6.6-6-11z" fill="url(#g)"/><path d="M9 14.2a3 3 0 0 0 2.4 2.9" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+  <h1>Water Break</h1>
+  <p>Stay hydrated while you browse</p>
+</div>
+
+<div class="t" id="marquee">
+  <div class="glow a"></div><div class="glow b"></div>
+  <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2.5c-3.4 4.4-6 7.5-6 11a6 6 0 0 0 12 0c0-3.5-2.6-6.6-6-11z" fill="url(#g)"/><path d="M9 14.2a3 3 0 0 0 2.4 2.9" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+  <h1>Water Break</h1>
+  <p>Gentle hydration reminders, goal tracking and quiet hours — right in your browser.</p>
+  <div class="dev" style="left:1000px;top:60px;width:292px;height:520px"><iframe src="popup-demo.html?tab=stats&static=1" style="width:340px;height:610px;zoom:.86"></iframe></div>
+  <iframe src="overlay-demo.html?static=1&clean=1&lang=en&ml=1250&m=4" style="position:absolute;left:700px;top:90px;width:330px;height:440px;border:0;filter:drop-shadow(0 20px 30px rgba(0,30,100,.35))"></iframe>
+</div>
+</body></html>

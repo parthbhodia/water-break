@@ -1,0 +1,61 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>overlay demo</title>
+<link rel="stylesheet" href="../../content.css">
+<style>
+  html,body{margin:0;height:100%;overflow:hidden}
+  body{font-family:-apple-system,'Segoe UI',system-ui,sans-serif;background:#fff;color:#1c1c1e}
+  .nav{display:flex;align-items:center;gap:18px;padding:16px 40px;border-bottom:1px solid #eceef2;font-size:14px;color:#6b7280}
+  .nav b{color:#111;font-size:16px;margin-right:12px}
+  .wrap{padding:36px 56px;display:grid;grid-template-columns:2fr 1fr;gap:36px}
+  h1{font-size:40px;line-height:1.1;margin:0 0 14px;letter-spacing:-1px}
+  .line{height:11px;border-radius:6px;background:#eceef2;margin:12px 0}
+  .img{height:200px;border-radius:14px;background:linear-gradient(135deg,#bcd7ff,#e9d7ff);margin:20px 0}
+  .side div{height:90px;border-radius:12px;background:#f3f4f7;margin-bottom:16px}
+</style></head>
+<body>
+<div class="nav"><b>Daily Reader</b><span>Tech</span><span>Design</span><span>Science</span><span>Culture</span></div>
+<div class="wrap">
+  <div>
+    <h1>How teams stay focused through long working days</h1>
+    <div class="line" style="width:92%"></div><div class="line" style="width:78%"></div>
+    <div class="img"></div>
+    <div class="line" style="width:95%"></div><div class="line" style="width:88%"></div><div class="line" style="width:60%"></div>
+  </div>
+  <div class="side"><div></div><div></div><div></div></div>
+</div>
+<script>
+  const q = new URLSearchParams(location.search);
+  if (q.get('static')) {
+    window.setInterval = () => 0;
+    const s = document.createElement('style');
+    s.textContent = '*,*::before,*::after{animation:none!important;transition:none!important}.wb-particle,.wb-ripple{display:none!important}';
+    document.head.append(s);
+  }
+  if (q.get('clean')) {
+    const c = document.createElement('style');
+    c.textContent = 'html,body{background:transparent!important}.nav,.wrap{display:none!important}#wb-backdrop{display:none!important}#wb-card{box-shadow:none!important}';
+    document.head.append(c);
+  }
+  let handler;
+  window.chrome = { runtime: { onMessage: { addListener: f => handler = f }, sendMessage: () => {} } };
+</script>
+<script src="../../i18n.js"></script>
+<script src="../../content.js"></script>
+<script>
+  const lang = q.get('lang') || 'en';
+  const goal = 2000, ml = Number(q.get('ml') || 1250);
+  const msg = wbMessages(lang)[Number(q.get('m') || 0)];
+  handler({
+    type: 'SHOW_WATER', message: msg, lingerSeconds: 30,
+    labels: {
+      drank: wbT(lang, 'overlayDrank', { n: 250 }),
+      snooze: wbT(lang, 'overlaySnooze'),
+      timer: wbT(lang, 'overlayTimer', { n: '{n}' }),
+      progress: wbT(lang, 'overlayProgress', { a: ml.toLocaleString('en'), b: goal.toLocaleString('en') }),
+      pct: Math.round(ml / goal * 100),
+      aria: wbT(lang, 'overlayAria'),
+      dir: wbIsRtl(lang) ? 'rtl' : 'ltr',
+    }
+  }, {}, () => {});
+</script>
+</body></html>

@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Pause eau – Rappel d'hydratation et suivi de l'eau"
+  },
+  "extDescription": {
+    "message": "Des rappels doux pour boire de l'eau en naviguant. Suivez votre objectif, réglez des heures calmes, reportez à tout moment."
+  },
+  "actionTitle": {
+    "message": "Pause eau – rappel d'hydratation"
+  }
+}

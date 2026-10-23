@@ -1,0 +1,32 @@
+💧 Water Break is a hydration reminder and water tracker for Chrome. It reminds you to drink water while you work, study or browse, and helps you reach your daily water goal, with a calm, beautiful reminder instead of a harsh alarm.
+
+It's easy to forget to drink water during long screen sessions. Choose how often you want to be reminded, and a gentle water-drop card appears right on the page you're reading. Tap "I drank water" and get back to what you were doing.
+
+✨ WHAT YOU CAN DO
+⏰ Get drink-water reminders every 20 minutes up to every few hours, or set any custom interval
+🥤 Log a cup with one tap, or snooze the reminder for 10 minutes
+🎯 Track your daily water intake in ml, with a progress ring toward your goal
+⚙️ Set your own daily hydration goal and cup size, and quick-add 150, 330 or 500 ml (or any amount)
+📊 Review the last 7 days with a chart, daily average, best day and goal streak
+📅 Choose which days of the week reminders run: workdays only, weekends off, whatever fits your routine
+🌙 Set quiet hours so you're never reminded at night
+☀️ Switch between light and dark mode with the sun and moon switch, or follow your system
+🔔 Get a system notification on pages where the on-page reminder can't appear
+🌍 Use it in 19 languages: English, Español, Français, Deutsch, Português, Türkçe, हिन्दी, বাংলা, தமிழ், اردو, 日本語, 한국어, 简体中文, 繁體中文, Bahasa Indonesia, Bahasa Melayu, Filipino, Tiếng Việt and ไทย
+🧭 Learn the settings that matter in a short guided tour the first time you open it
+
+👩‍💻 WHO IT'S FOR
+Office and remote workers, students, developers, gamers, and anyone who spends hours at a screen and wants a simple healthy habit: drinking enough water, taking short breaks and staying focused.
+
+🚀 HOW IT WORKS
+1. Click the Water Break icon and pick your reminder interval and daily goal.
+2. Keep browsing. When it's time, a reminder appears on your page.
+3. Tap "I drank water" to log your cup, or log any amount from the popup.
+
+🔒 PRIVATE BY DESIGN
+No account, no ads, no tracking, no analytics. Your water log stays on your device, and Water Break makes no network requests. Your settings can sync through your own Chrome account if you use Chrome Sync.
+
+❓ WHY DOES IT NEED ACCESS TO WEB PAGES?
+To show the reminder on the page you're viewing, Water Break runs a small script on web pages. It only draws and removes the reminder card. It does not read, collect or send page content or your browsing history.
+
+💬 Have an idea or found a bug? Use the support link on this page. Feedback is welcome.

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support – Water Break</title>
+  <meta name="description" content="Help for the Water Break Chrome extension: troubleshooting reminders, settings, languages, and how to contact support.">
+  <link rel="canonical" href="https://parthbhodia.github.io/water-break/support.html">
+  <link rel="icon" href="images/icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="images/icon.png" alt="">Water Break</a>
+    <nav><a href="./">Home</a><a href="privacy.html">Privacy</a></nav>
+  </header>
+
+  <main class="doc">
+    <h1>Support</h1>
+    <p class="meta">Need help with Water Break? Start with the answers below, or get in touch.</p>
+
+    <h2>Contact</h2>
+    <p>Email <a href="mailto:parthbhodia08@gmail.com">parthbhodia08@gmail.com</a>, or open an issue on <a href="https://github.com/parthbhodia/water-break/issues">GitHub</a>. Please include your Chrome version and what you expected to happen.</p>
+
+    <h2>Common questions</h2>
+
+    <details>
+      <summary>I'm not seeing any reminders</summary>
+      <p>Check these in order: the on/off switch at the top of the popup is on; you are not inside quiet hours; today is one of your reminder days (Settings, Remind me on); you haven't snoozed the reminder; and your interval is what you expect. After installing or updating, tabs that were already open need a reload before they can show the on-page card. Until then, you get a system notification instead.</p>
+    </details>
+
+    <details>
+      <summary>The reminder shows as a notification, not on the page</summary>
+      <p>Chrome doesn't allow extensions to draw on chrome:// pages, the new tab page, the Chrome Web Store or the PDF viewer, so Water Break sends a system notification there. If you also don't see notifications, check that Chrome is allowed to show notifications in your operating system settings.</p>
+    </details>
+
+    <details>
+      <summary>How do I change the language or theme?</summary>
+      <p>Open the popup, go to Settings, and use Language and Appearance. You can also flip light and dark with the sun and moon switch at the top. Language is Auto by default and follows your browser.</p>
+    </details>
+
+    <details>
+      <summary>How do I replay the intro tour?</summary>
+      <p>Open the popup, go to Settings, and tap "Take the tour" at the bottom.</p>
+    </details>
+
+    <details>
+      <summary>Where is my water log stored? How do I delete it?</summary>
+      <p>On your device only. Uninstalling the extension removes it. See the <a href="privacy.html">privacy policy</a> for details.</p>
+    </details>
+
+    <details>
+      <summary>Why does it need access to all websites?</summary>
+      <p>The reminder can appear on whichever page you happen to be viewing, so the content script has to be available on every http and https page. It only draws and removes the reminder card and never reads page content or browsing history.</p>
+    </details>
+
+    <details>
+      <summary>Can you add a language or a feature?</summary>
+      <p>Probably. Send a request by email or open a GitHub issue. Water Break currently supports 19 languages.</p>
+    </details>
+  </main>
+
+  <footer>
+    <a href="./">Home</a><a href="privacy.html">Privacy policy</a><a href="https://github.com/parthbhodia/water-break">GitHub</a>
+    <div>© 2026 Water Break</div>
+  </footer>
+</div>
+</body>
+</html>
